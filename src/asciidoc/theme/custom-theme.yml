@@ -92,11 +92,12 @@ heading:
 title_page:
   align: right
   logo:
+    image: image:../images/sample-logo.jpg[pdfwidth=25%]
     top: 10%
   title:
     top: 55%
     font_size: $heading_h1_font_size
-    font_color: 999999
+    font_color: ff00ff
     line_height: 0.9
   subtitle:
     font_size: $heading_h3_font_size
@@ -213,36 +214,24 @@ table:
   # HACK accounting for line-height
   cell_padding: [3, 3, 6, 3]
 toc:
+  font_style: bold
   dot_leader_color: dddddd
-  #dot_leader_content: '. '
+  dot_leader_content: '. '
   indent: $horizontal_rhythm
   line_height: 1.4
-# NOTE In addition to footer, header is also supported
-footer:
-  font_size: $base_font_size_small
-  font_color: $base_font_color
-  # NOTE if background_color is set, background and border will span width of page
-  border_color: dddddd
-  border_width: 0.25
-  height: $base_line_height_length * 2.5
+
+header:
+  height: 0.75in
   line_height: 1
-  padding: [$base_line_height_length / 2, 1, 0, 1]
-  vertical_align: top
-  #image_vertical_align: <alignment> or <number>
-  # additional attributes for content:
-  # * {page-count}
-  # * {page-number}
-  # * {document-title}
-  # * {document-subtitle}
-  # * {chapter-title}
-  # * {section-title}
-  # * {section-or-chapter-title}
   recto_content:
-    #right: '{section-or-chapter-title} | {page-number}'
-    #right: '{document-title} | {page-number}'
-    right: '{page-number}'
-    #center: '{page-number}'
+    center: '(C) ACME -- v{revnumber}, {docdate}'
   verso_content:
-    #left: '{page-number} | {chapter-title}'
-    left: '{page-number}'
-    #center: '{page-number}'
+    center: $header_recto_content_center
+footer:
+  height: 0.75in
+  line_height: 1
+  recto_content:
+    right: '{section-or-chapter-title} | *{page-number}*'
+  verso_content:
+    left: '*{page-number}* | {chapter-title}'
+
