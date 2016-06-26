@@ -1,8 +1,8 @@
-= Example Manual
-Doc Writer <doc.writer@example.org>
-v1.0, 2014-09-09
+= Example Manual Guide
+Xelian <doc.writer@example.org>
+v1.0, {revdate}
 :example-caption!:
-ifndef::imagesdir[:imagesdir: images]
+ifndef::imagesdir[:imagesdir: ../images]
 
 == Introduction
 
