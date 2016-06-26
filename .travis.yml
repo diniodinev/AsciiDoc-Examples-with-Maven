@@ -1,0 +1,19 @@
+language: java
+jdk:
+  - oraclejdk8
+  
+ os:
+  - linux
+  
+sudo: false
+
+script: mvn clean process-resources
+  
+deploy:
+  provider: releases
+  api_key: ${api_key}
+  file: "target/book/main.pdf"
+  skip_cleanup: true
+  on:
+    all_branches: true
+    tags: true
